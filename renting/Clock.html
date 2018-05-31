@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -10,6 +11,8 @@
 	
 }
     #canvas{
+    	width:330px;
+    	height: 330px;
     border-radius:15%; 
     background-color: black;
 }
@@ -17,7 +20,7 @@
 </head>
 <body>
     <div class="time">
-        <canvas id="canvas" width="320" height="320"> 
+        <canvas id="canvas" width="330" height="330"> 
         </canvas>
     </div>
     
@@ -40,8 +43,8 @@ function draw(){
     ctx.stroke();
     <!--大表盘刻度-->
     var minnum = ['15','20','25','30','35','40','45','50','55','60','5','10'];
-    ctx.font=' 0.7rem 微软雅黑';
-    ctx.fillStyle="#fff";
+    ctx.font=' 0.8rem Arial';
+    ctx.fillStyle="white";
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.lineWidth = 2;
@@ -73,7 +76,7 @@ function draw(){
 
     <!--小表盘刻度样式-->
     var hournum =[3,4,5,6,7,8,9,10,11,12,1,2];
-    ctx.font=' bold 1.3rem 微软雅黑';
+    ctx.font=' bold 1.3rem Arial';
     hournum.forEach(function(number,i){
         var hudu = Math.PI*2/12*i;
         var x=Math.cos(hudu)*(r-33*rem);
@@ -142,7 +145,7 @@ function drawcir2(){
 }
 <!--显示月份-->
 function drawmon(Day,date){
-    ctx.font='1rem 微软雅黑';
+    ctx.font='1rem Arial';
     ctx.save();
     ctx.fillText(Day,33*rem,0);
     ctx.restore();
