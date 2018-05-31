@@ -21,7 +21,7 @@
         </canvas>
     </div>
     
-  <script>
+ <script>
    	var c=document.getElementById("canvas");
 var ctx=c.getContext("2d");
 var width = ctx.canvas.width;
@@ -32,7 +32,7 @@ var rem=width/230;
 function draw(){
     <!--表盘-->
     ctx.save();
-    ctx.strokeStyle="#000";
+    ctx.strokeStyle="  rgba(209, 209, 209, 0.767);";
     ctx.translate(r,r);
     ctx.beginPath();
     ctx.arc(0,0,r-25*rem,0,Math.PI*2,false);
@@ -40,7 +40,7 @@ function draw(){
     ctx.stroke();
     <!--大表盘刻度-->
     var minnum = ['15','20','25','30','35','40','45','50','55','60','5','10'];
-    ctx.font='0.8vw 微软雅黑';
+    ctx.font='bold 0.7rem 微软雅黑';
     ctx.fillStyle="#fff";
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -73,7 +73,7 @@ function draw(){
 
     <!--小表盘刻度样式-->
     var hournum =[3,4,5,6,7,8,9,10,11,12,1,2];
-    ctx.font=' bold 1.6vw 微软雅黑';
+    ctx.font=' bold 1.3rem 微软雅黑';
     hournum.forEach(function(number,i){
         var hudu = Math.PI*2/12*i;
         var x=Math.cos(hudu)*(r-33*rem);
@@ -142,7 +142,7 @@ function drawcir2(){
 }
 <!--显示月份-->
 function drawmon(Day,date){
-    ctx.font='1.5vw 微软雅黑';
+    ctx.font='1rem 微软雅黑';
     ctx.save();
     ctx.fillText(Day,33*rem,0);
     ctx.restore();
