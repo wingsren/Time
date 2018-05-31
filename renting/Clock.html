@@ -12,8 +12,8 @@
 	
 }
     #canvas{
-    	width:400px;
-    	height: 400px;
+    	width:330px;
+    	height: 330px;
     border-radius:15%; 
     background-color: black;
 }
@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="time">
-        <canvas id="canvas" width="400px" height="400px"> 
+        <canvas id="canvas" width="330px" height="330px"> 
         </canvas>
     </div>
     
@@ -44,7 +44,7 @@ function draw(){
     ctx.stroke();
     <!--大表盘刻度-->
     var minnum = ['15','20','25','30','35','40','45','50','55','60','5','10'];
-    ctx.font=' 0.8rem Arial';
+    ctx.font=' 1rem Arial';
     ctx.fillStyle="white";
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -77,7 +77,7 @@ function draw(){
 
     <!--小表盘刻度样式-->
     var hournum =[3,4,5,6,7,8,9,10,11,12,1,2];
-    ctx.font=' 1.9rem Arial';
+    ctx.font=' 2.3rem Arial';
     hournum.forEach(function(number,i){
         var hudu = Math.PI*2/12*i;
         var x=Math.cos(hudu)*(r-33*rem);
